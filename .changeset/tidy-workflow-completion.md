@@ -1,5 +1,5 @@
 ---
-"@voltagent/core": patch
+"@voltagent/core": minor
 ---
 
 Clean up workflow signal polling intervals and abort listeners when a step settles, including successful and failed steps.

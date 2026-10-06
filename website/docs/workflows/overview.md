@@ -301,7 +301,7 @@ const execution = await started.completion;
 console.log(execution.status, execution.result);
 ```
 
-Step failures resolve `completion` with an `error` status, just like `.run()`. A failure before execution can produce a result rejects `completion` after background failure persistence finishes. Existing callers can leave the promise unawaited to continue using background execution.
+Step failures resolve `completion` with an `error` status, just like `.run()`. If execution fails before producing a result, `completion` rejects after background failure persistence finishes. Existing callers can leave the promise unawaited to continue using background execution.
 
 **3. The Reusable Way: `.toWorkflow()`**
 
